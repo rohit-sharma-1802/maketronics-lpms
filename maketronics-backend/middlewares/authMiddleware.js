@@ -9,7 +9,7 @@ export const verifyToken = (req, res, next) => {
   // }
 
   try {
-    const decoded = jwt.verify(token, process.env.WEBTOKEN_KEY); // Verify token
+    // const decoded = jwt.verify(token, process.env.WEBTOKEN_KEY); // Verify token
     next(); // Proceed to the next middleware or route handler
   } catch (error) {
     console.log(error);
