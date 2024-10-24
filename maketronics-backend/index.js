@@ -15,7 +15,7 @@ dotenv.config();
 const app = express();
 
 const corsOptions = {
-    origin: 'http://localhost:5173', // React app origin
+    origin: 'https://maketronics-lpms-bxmh.vercel.app/', // React app origin
     credentials: true, // Allow credentials (cookies) to be sent
 };
 
