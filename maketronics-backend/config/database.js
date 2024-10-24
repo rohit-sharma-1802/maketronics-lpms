@@ -1,10 +1,10 @@
 import { createPool } from "mysql";
 export const pool = createPool({
-  port: 3306,
-  host: "35.244.56.142",
-  user: "maketronics",
-  password: "Maketronics2024$",
-  database: "maketronics",
+  port: process.env.DB_PORT,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.MYSQL_DB,
   connectionLimit: 10,
 });
 
