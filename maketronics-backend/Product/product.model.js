@@ -119,7 +119,7 @@ export const updateProductByPartNo = async (product) => {
 export const getAllProductPaginated = async (page, limit) => {
     const offset = (page - 1) * limit;
 
-    return queryAsync('SELECT * FROM Product LIMIT ? OFFSET ?', [limit, offset]);
+    return queryAsync('SELECT * FROM product LIMIT ? OFFSET ?', [limit, offset]);
 };
 
 // Get product by part number

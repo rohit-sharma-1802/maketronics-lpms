@@ -72,6 +72,7 @@ export const deleteProduct = async(req, res)=>{
 
 export const getAllProduct = async (req, res) => {
     try {
+        console.log("token received");
         const page = parseInt(req.query.page, 10) || 1; 
         const limit = parseInt(req.query.limit, 10) || 10;
 
