@@ -133,7 +133,7 @@ export const getQuoteDetailsByLeadId = async(id) =>{
 
 export const getLeadsCountForUser = async (email) => {
     try {
-        const rows = await queryAsync('SELECT COUNT(*) AS count FROM LEADDETAILS WHERE USEREMAIL = ?', [email]);
+        const rows = await queryAsync('SELECT COUNT(*) AS count FROM LeadDetails WHERE USEREMAIL = ?', [email]);
         return rows[0].count;
     } catch (error) {
         throw error;
@@ -142,7 +142,7 @@ export const getLeadsCountForUser = async (email) => {
 
 export const getLeadsCountForAdmin = async () => {
     try {
-        const rows = await queryAsync('SELECT COUNT(*) AS count FROM LEADDETAILS', []);
+        const rows = await queryAsync('SELECT COUNT(*) AS count FROM LeadDetails', []);
         return rows[0].count;
     } catch (error) {
         throw error;
